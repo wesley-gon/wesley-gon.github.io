@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Oswald:wght@600;700&display=swap');
+
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 18px;   /* !important pode ser usado para fazer uma regr prevalecer, ainda que seja menos específica*/
+    
+    /* --fontbase:18px; você declara uma variavel no css 
+    font-size: var(--fontbase) recuperação da varivel*/
+    scroll-behavior: smooth;
+    scroll-padding-top: 130px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Merriweather', serif;
+    
+}
+
+img, iframe, video {
+    max-width: 100%;
+    
+}
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+}
+header{
+    background-color: #fff;
+    text-align: center;
+    position: sticky;
+    top:0;
+    padding-bottom: 0.5rem;
+
+}
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+
+}
+nav a{
+    text-decoration: none;
+    color: #333;
+    font-family: 'Oswald', sans-serif;
+    font-weight: normal;
+    padding: .5rem .6rem;
+    transition: all 0.8s;
+}
+nav a:hover{
+    color: rgb(255, 238, 60);
+    background-color: black;
+    
+}
+
+main, section{
+    height: 73vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+ .conteudo{
+    width: 90%;
+    margin: auto;
+    max-width: 800px;
+}
+
+.conteudo h1{
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.conteudo p {
+    line-height: 2rem;
+    line
+}
+
+
+#produto {
+    background-image: url(imagens/h13-background-img-1.jpg);
+    background-size: cover;
+    background-position-x: center;
+}
+
+.cta {
+    text-decoration: none;
+    background-color: rgb(255, 238, 60);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    padding: 1.15rem 1.8rem;
+    transition: all 0.8s;
+    color: black;
+    font-size: .8rem;
+    line-height: 5.5rem;
+    letter-spacing: 3px;  /* controla o espaço entre as letras/caracteres */
+    text-transform: uppercase;
+}
+
+.verde-agua {
+    background-color: #26ccca;
+    color: #fff;
+}
+.cta::before{
+    content: "+";
+    margin-right: 0.8rm;
+}
+
+#ux{
+    color: #fff;
+    background-image: url(imagens/h13-background-img-2.jpg);
+   
+}
+#motion {
+    background-image: url(imagens/h13-background-img-3.jpg);
+    background-size: cover;
+    background-position-x: center;
+
+}
+#brand{
+    background-image: url(imagens/h13-background-img-4.jpg);
+    color: #fff;
+    
+}
+.texto-cinza{
+    color: #b8b8b8;
+}
+#print{
+    color: #fff;
+    background-size: cover;
+    background-image: url(imagens/h13-background-img-5.jpg);
+    background-position-x: center;
+
+}
+
+/*para telas acima de 700px */
+
+@media screen and (min-width:700px) {
+
+    header{
+        display: flex;
+        height: 10vh;
+        justify-content: space-around;
+        align-items: center
+
+    }
+
+    #logo{
+        width: 20%;
+    }
+
+    header nav{
+        width: 70%;
+        max-width: 800px;
+
+    }
+
+    #produto, #motion, #print {
+        background-attachment: fixed;
+    }
+
+    .conteudo{
+        width: 50%;
+        max-width: 800px;
+        margin: 0;
+        margin-left: 4rem;
+    }
+    .conteudo h1{
+        font-size: 5rem;
+        margin-bottom: -0.6rem;
+    }
+    nav a{
+        font-size: 1.1rem;
+        padding: 0.7rem 1.0rem;
+    }
+}
